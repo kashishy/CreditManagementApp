@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AmountActivity"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:paddingTop="40dp"
+    android:background="@drawable/background">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Credit To Transfer"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/txt_amt"
+        android:textColor="#24bfda"/>
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_below="@+id/txt_amt"
+        android:layout_height="40dp"
+        android:background="@drawable/txtbackground"
+        android:hint="Enter Credit To Transfer"
+        android:text="0.0"
+        android:inputType="numberDecimal"
+        android:id="@+id/etxt_amount_id"/>
+    <Button
+        android:layout_marginTop="20dp"
+        android:background="@drawable/buttonbackground"
+        android:textColor="#AFB0B4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/btn_continue_id"
+        android:text="Continue"
+        android:layout_below="@+id/etxt_amount_id"/>
+</RelativeLayout>

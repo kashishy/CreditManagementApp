@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="15dp"
+    android:paddingRight="15dp"
+    android:paddingLeft="15dp"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List Of Users"
+        android:textColor="#24bfda"
+        android:textSize="25dp"
+        android:id="@+id/txt_id"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="10dp"
+        android:paddingRight="20dp"
+        android:layout_below="@+id/txt_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerListUser_id">
+    </android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>

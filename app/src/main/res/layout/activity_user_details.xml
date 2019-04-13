@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".UserDetailsActivity">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Details"
+            android:textColor="#24bfda"
+            android:layout_marginBottom="20dp"
+            android:textSize="25dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/txtbackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name :  "
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"/>
+            <TextView
+                android:id="@+id/txt_name_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Name"
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"
+                android:inputType="textPersonName" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@drawable/txtbackground"
+            android:layout_height="40dp"
+            android:layout_marginBottom="15dp"
+            android:gravity="center_vertical"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email :  "
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"/>
+
+            <TextView
+                android:id="@+id/txt_email_id"
+                android:hint="Email"
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/txtbackground"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Credit :  "
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"/>
+            <TextView
+                android:id="@+id/txt_amount_id"
+                android:hint="Amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="#B5B5BB"
+                android:textSize="15dp"
+                android:inputType="numberDecimal" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1.5"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:text="Transfer Money"
+            android:background="@drawable/buttonbackground"
+            android:textColor="#B5B5BB"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:id="@+id/btn_transfer_id"/>
+
+    </LinearLayout>
+
+</LinearLayout>
