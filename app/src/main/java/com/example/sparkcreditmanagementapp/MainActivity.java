@@ -91,6 +91,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void delete(){
-        long check = mydb.deleteData(13);
+        long check = mydb.deleteData(14);
     }
 }

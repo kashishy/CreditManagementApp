@@ -29,32 +29,41 @@ public class AmountActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         idr = bundle.getInt("id");
         amount = bundle.getDouble("amount");
+        //credit = Double.parseDouble(etxtAmount.getText().toString());
         //Toast.makeText(AmountActivity.this,"AMount "+amount+" credit "+credit,Toast.LENGTH_LONG).show();
 
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if(check()) {
+               if(checkCredit()) {
                     Intent intent = new Intent(AmountActivity.this, SelectUserActivity.class);
                     intent.putExtra("id", idr);
                     intent.putExtra("amount", credit);
                     startActivity(intent);
+                }else {
+                    //Toast.makeText(AmountActivity.this, "Wrong", Toast.LENGTH_SHORT).show();
                 }
             }
         });
     }
 
-    public boolean check(){
+    public boolean checkCredit(){
 
         credit = Double.parseDouble(etxtAmount.getText().toString());
-        if(amount>=credit) {
-            return true;
-        }
-        else{
-            etxtAmount.setError("Change Amount");
-            Toast.makeText(AmountActivity.this,"Entered Amount Is Greater Than Maximum Available Amount",Toast.LENGTH_LONG).show();
+        if(credit<=0.0) {
+            etxtAmount.setError("Enter Amount");
+            Toast.makeText(AmountActivity.this,"Enter Amount more than 0",Toast.LENGTH_LONG).show();
             return false;
+        }else {
+            if(amount>=credit) {
+                return true;
+            }
+            else{
+                etxtAmount.setError("Change Amount");
+                Toast.makeText(AmountActivity.this,"Entered Amount Is Greater Than Maximum Available Amount",Toast.LENGTH_LONG).show();
+                return false;
+            }
         }
     }
 }

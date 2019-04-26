@@ -20,7 +20,7 @@
 
     <android.support.v7.widget.RecyclerView
         android:paddingTop="10dp"
-        android:paddingRight="20dp"
+        android:paddingRight="10dp"
         android:layout_below="@+id/txt_id"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
